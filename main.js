@@ -19,7 +19,7 @@ async function _onItemGive(event) {
   targets.push(...this.actor.items.filter((o) => o.type === "container"));
   targets.push(...game.items.entities.filter((o) => o.hasPerm(game.user, "OWNER") && o.type === "container"));
   // TODO Check if GM is connected?
-  targets.push(...game.actors.entities.filter(o => !o.hasPerm(game.user) && hasOtherPlayerPermission(o, "OWNER") && o !== this.actor));
+  targets.push(...game.actors.entities.filter(o => o.data.type === "character" && !o.hasPerm(game.user) && hasOtherPlayerPermission(o, "OWNER") && o !== this.actor));
   const targetData = await game.pf1.utils.dialogGetActor(`Give item to actor`, targets);
 
   if (!targetData) return;

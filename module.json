@@ -2,7 +2,7 @@
 	"name": "pf1-enhanced-gifting",
 	"title": "PF1 Enhanced Gifting",
 	"description": "Improved gifiting of items to other Players. Allows to gift items to characets you do not own.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"minimumCoreVersion" : "0.7.9",
 	"compatibleCoreVersion" : "0.7.9",
 	"authors": [
